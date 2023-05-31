@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>identificador de vehiculos</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #64e7f8;
+            
+        }
+
+        h1 {
+            color: #ff6600;
+            margin: 30px 0;
+        }
+
+        h6 {
+            color: #ffffff;
+            margin: 30px 0;
+        }
+
+
+        input[type="text"] {
+            padding: 10px;
+            width: 400px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6905;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>identificador de vehiculos</h1>
+
+        <img src="https://media.tenor.com/d_urv6GSwPUAAAAC/drift.gif" alt="Logo" class="logo">
+      
+      
+     
+    <form action="/predict" method="POST">
+        <input type="text" name="url" placeholder="Introduce la URL de la imagen">
+        <br>
+        <input type="submit" value="Detectar">
+    </form>
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+
+    <h6>solo son validas imagenes jpg, las imagenes png y gif no mostraran ningun resulato.
+        los vehiculos validos son: carros, motos, f1 y trocas
+    </h6>
+
+    <img src="https://i.imgur.com/QLVucbT.gif" >
+</body>
+</html>
